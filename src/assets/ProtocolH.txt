@@ -1,0 +1,25 @@
+//
+//  @class_name.h
+//  didiyouwo
+//  @desc
+//  Created by mygame on 15/9/10.
+//  Copyright (c) 2015年 youwoxing. All rights reserved.
+//
+
+#import "YWRequestModel.h"
+@class @class_resp;
+///@desc
+@interface @class_nameData : NSObject
+<<pck_vars>>
+- (NSDictionary *)paras;
+@end
+
+@interface @class_name : YWRequestModel
+- (void)sendWithReqData:(@class_nameData *)reqData
+                success:(void (^)(NSString *queryURL, @class_resp *responseObject))success
+                failure:(void (^)(NSString *queryURL, NSError *error))failure;
+
+@end
+<<<pck_vars>>>
+///@vars_desc
+@property (copy, nonatomic) NSString *m@vars_topupname;

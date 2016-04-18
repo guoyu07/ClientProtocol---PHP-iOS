@@ -1,0 +1,14 @@
+﻿package com.jiaoyou.youwo.php;
+
+public class @class_name {
+	public static String GetUrl(<<pck_vars>>)
+	{		
+		String url = Macro.PHPROOTURL + "@class_url?";
+		<<<pck_vars>>>
+		return url.substring(0, url.length()-1);
+	}
+}
+<<<pck_vars>>>
+@vars_class @vars_name
+<<<pck_contain>>>
+url += "@vars_name="+@vars_name+"&";

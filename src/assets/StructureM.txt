@@ -1,0 +1,36 @@
+//
+//  @class_name.m
+//  didiyouwo
+//
+//  Created by mygame on 15/9/10.
+//  Copyright (c) 2015年 youwoxing. All rights reserved.
+//
+
+#import "@class_name.h"
+
+@implementation @class_name
+- (instancetype)initWithDic:(NSDictionary *)dic
+{
+    self = @super;
+    if (self&&[dic isKindOfClass:[NSDictionary class]]) {	
+<<vars>>
+    }else{
+		NSLog(@"%@ parse error!\nerror parse class:%@\nparse data:%@", NSStringFromClass([self class]), NSStringFromClass([dic class]), dic);
+	}
+    return self;
+}
++ (NSMutableArray *)array@class_name:(NSArray *)Array {
+	if (![Array isKindOfClass:[NSArray class]]) {
+        return [NSMutableArray array];
+    }
+    NSMutableArray *m@class_names = [NSMutableArray array];
+    for (NSDictionary *dic in Array) {
+        [m@class_names addObject:[[@class_name alloc] initWithDic:dic]];
+    }
+    return m@class_names;
+}
+
+@end
+
+<<<vars>>>
+		self.m@vars_topupname = @init_vars_name;

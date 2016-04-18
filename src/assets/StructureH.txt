@@ -1,0 +1,20 @@
+//
+//  @class_name.h
+//  didiyouwo
+//	@desc
+//  Created by mygame on 15/9/10.
+//  Copyright (c) 2015年 youwoxing. All rights reserved.
+//
+
+#import "YWBasePhpBean.h"
+@import
+///@desc
+@interface @class_name : YWBasePhpBean
+<<vars>>
+- (instancetype)initWithDic:(NSDictionary *)dic;
++ (NSMutableArray *)array@class_name:(NSArray *)Array;
+@end
+
+<<<vars>>>
+///@vars_desc
+@vars_property;

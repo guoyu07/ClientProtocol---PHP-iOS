@@ -1,0 +1,41 @@
+//
+//  @class_name.m
+//  didiyouwo
+//
+//  Created by mygame on 15/9/10.
+//  Copyright (c) 2015年 youwoxing. All rights reserved.
+//
+
+#import "@class_name.h"
+#import "@class_resp.h"
+@implementation @class_nameData
+
+- (NSDictionary *)paras {
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+<<pck_vars>>
+    return dic;
+    
+}
+
+@end
+
+@implementation @class_name
+
+- (void)sendWithReqData:(@class_nameData *)reqData success:(void (^)(NSString *queryURL, @class_resp *responseObject))success failure:(void (^)(NSString *queryURL, NSError *error))failure {
+	[self queryWithBaseURL:[self.protocolBaseUrl stringByAppendingString:@"@class_url"] HTTPMethod:@"@class_httpmethod" parameters:[reqData paras] success:^(NSString *queryURL, id responseObject) {
+		NSLog(@"@class_url=%@", responseObject);
+		if ([[responseObject objectForKey:@"code"] integerValue] == CODE_SUCCESS) {
+            success(queryURL, [[@class_resp alloc] initWithDic:(NSDictionary *)responseObject]);
+        }
+        else {
+            failure(queryURL, [NSError errorWithResponseObject:responseObject]);			
+        }
+    } failure:failure];
+}
+
+@end
+
+<<<pck_vars>>>
+	if(self.m@vars_topupname){
+		[dic setObject:self.m@vars_topupname forKey:@"@vars_name"];
+	}
